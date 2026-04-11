@@ -17,6 +17,7 @@
     <License>MIT</License>
     <GeneratePackageOnBuild>false</GeneratePackageOnBuild>
     <PackageIcon>slo248-nuget-icon.png</PackageIcon>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
   </PropertyGroup>
 
   <ItemGroup>
@@ -25,6 +26,10 @@
 
   <ItemGroup>
     <None Update="slo248-nuget-icon.png">
+      <Pack>True</Pack>
+      <PackagePath></PackagePath>
+    </None>
+    <None Update="README.md">
       <Pack>True</Pack>
       <PackagePath></PackagePath>
     </None>
