@@ -1,7 +1,7 @@
 ﻿// Copyright (c) Slo248.
 // Licensed under the MIT License.
 
-namespace UnitTests;
+namespace Slo248.Net.Tests.UnitTests;
 
 public class EntityTests
 {

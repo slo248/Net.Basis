@@ -1,9 +1,7 @@
 ﻿// Copyright (c) Slo248.
 // Licensed under the MIT License.
 
-using System.Collections;
-
-namespace DomainDrivenDesign.Models;
+namespace Slo248.Net.DomainDrivenDesign.Models;
 
 public abstract class BaseEntity<TId, TEntity>
     where TId : notnull

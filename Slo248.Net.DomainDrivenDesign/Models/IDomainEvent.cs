@@ -3,6 +3,6 @@
 
 using MediatR;
 
-namespace DomainDrivenDesign.Models;
+namespace Slo248.Net.DomainDrivenDesign.Models;
 
 public interface IDomainEvent : INotification;

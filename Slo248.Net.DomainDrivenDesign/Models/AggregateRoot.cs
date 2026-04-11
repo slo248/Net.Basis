@@ -1,11 +1,11 @@
 ﻿// Copyright (c) Slo248.
 // Licensed under the MIT License.
 
-namespace DomainDrivenDesign.Models;
+namespace Slo248.Net.DomainDrivenDesign.Models;
 
-public abstract class AggregateRoot<TId, TEntity>: BaseEntity<TId, TEntity>, IAggregateRoot
-    where TId: notnull
-    where TEntity: notnull
+public abstract class AggregateRoot<TId, TEntity> : BaseEntity<TId, TEntity>, IAggregateRoot
+    where TId : notnull
+    where TEntity : notnull
 {
     private readonly List<IDomainEvent> _events = [];
 
@@ -26,8 +26,8 @@ public abstract class AggregateRoot<TId, TEntity>: BaseEntity<TId, TEntity>, IAg
     }
 }
 
-public abstract class AggregateRoot<TEntity>: AggregateRoot<Guid, TEntity>
-    where TEntity: notnull
+public abstract class AggregateRoot<TEntity> : AggregateRoot<Guid, TEntity>
+    where TEntity : notnull
 {
     protected AggregateRoot(EntityId<Guid, TEntity> id) : base(id)
     {
