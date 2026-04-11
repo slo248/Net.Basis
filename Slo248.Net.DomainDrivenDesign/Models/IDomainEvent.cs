@@ -1,8 +1,8 @@
 ﻿// Copyright (c) Slo248.
 // Licensed under the MIT License.
 
-using MediatR;
+using Slo248.Net.Cqrs.Requests;
 
 namespace Slo248.Net.DomainDrivenDesign.Models;
 
-public interface IDomainEvent : INotification;
+public interface IDomainEvent : IRequest;
