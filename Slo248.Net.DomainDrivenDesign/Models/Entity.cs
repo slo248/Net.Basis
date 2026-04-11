@@ -25,4 +25,8 @@ public abstract class Entity<TEntity> : Entity<Guid, TEntity>
     protected Entity(EntityId<Guid, TEntity> id, Action<IDomainEvent> raiseToRoot) : base(id, raiseToRoot)
     {
     }
+
+    protected Entity(Action<IDomainEvent> raiseToRoot) : base(new EntityId<Guid, TEntity>(Guid.NewGuid()), raiseToRoot)
+    {
+    }
 }

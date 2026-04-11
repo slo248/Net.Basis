@@ -32,4 +32,8 @@ public abstract class AggregateRoot<TEntity> : AggregateRoot<Guid, TEntity>
     protected AggregateRoot(EntityId<Guid, TEntity> id) : base(id)
     {
     }
+
+    protected AggregateRoot() : base(new EntityId<Guid, TEntity>(Guid.NewGuid()))
+    {
+    }
 }
