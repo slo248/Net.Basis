@@ -11,6 +11,8 @@ public abstract class Entity<TId, TEntity> : BaseEntity<TId, TEntity>
 
     protected Entity(EntityId<TId, TEntity> id, Action<IDomainEvent> raiseToRoot) : base(id)
     {
+        ArgumentNullException.ThrowIfNull(raiseToRoot);
+
         _raiseToRoot = raiseToRoot;
     }
 
