@@ -12,6 +12,11 @@ public class TestEntity : Entity<TestEntity>
     {
     }
 
+    public TestEntity(Action<IDomainEvent> raiseToRoot)
+        : base(raiseToRoot)
+    {
+    }
+
     public void TestRaiseDomainEvent(IDomainEvent domainEvent)
     {
         RaiseDomainEvent(domainEvent);

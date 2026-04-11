@@ -195,6 +195,24 @@ public class EntityTests
     }
 
     [Fact]
+    public void Constructor_WithoutIdParameter_ShouldGenerateNewGuidId()
+    {
+        // Arrange
+        Action<IDomainEvent> callback = _ => { };
+
+        // Act
+        var entity1 = new TestEntity(callback);
+        var entity2 = new TestEntity(callback);
+
+        // Assert
+        Assert.NotNull(entity1);
+        Assert.NotNull(entity2);
+        Assert.NotEqual(entity1.Id.Value, entity2.Id.Value);
+        Assert.IsType<Guid>(entity1.Id.Value);
+        Assert.IsType<Guid>(entity2.Id.Value);
+    }
+
+    [Fact]
     public void Equality_ShouldIgnoreCallback()
     {
         // Arrange

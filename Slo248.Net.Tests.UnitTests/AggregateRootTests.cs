@@ -148,7 +148,20 @@ public class AggregateRootTests
         Assert.IsType<Guid>(aggregateRoot.Id.Value);
     }
 
-// Add these tests to your AggregateRootTests class
+    [Fact]
+    public void Constructor_WithoutParameters_ShouldGenerateNewGuidId()
+    {
+        // Act
+        var aggregateRoot1 = new TestAggregateRoot();
+        var aggregateRoot2 = new TestAggregateRoot();
+
+        // Assert
+        Assert.NotNull(aggregateRoot1);
+        Assert.NotNull(aggregateRoot2);
+        Assert.NotEqual(aggregateRoot1.Id.Value, aggregateRoot2.Id.Value);
+        Assert.IsType<Guid>(aggregateRoot1.Id.Value);
+        Assert.IsType<Guid>(aggregateRoot2.Id.Value);
+    }
 
     [Fact]
     public void Equals_WithSameId_ShouldBeEqual()
@@ -231,7 +244,7 @@ public class AggregateRootTests
         var id2 = new EntityId<Guid, TestAggregateRoot>(Guid.NewGuid());
         var aggregateRoot1 = new TestAggregateRoot(id1);
         var aggregateRoot2 = new TestAggregateRoot(id2);
-     // Act & Assert
+        // Act & Assert
         Assert.NotEqual(aggregateRoot1.GetHashCode(), aggregateRoot2.GetHashCode());
     }
 

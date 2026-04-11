@@ -9,6 +9,10 @@ public class TestAggregateRoot : AggregateRoot<TestAggregateRoot>
     {
     }
 
+    public TestAggregateRoot()
+    {
+    }
+
     public void TestRaiseDomainEvent(IDomainEvent domainEvent)
     {
         RaiseDomainEvent(domainEvent);
