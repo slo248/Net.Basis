@@ -5,6 +5,17 @@
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
     <RootNamespace>Slo248.Net.DomainDrivenDesign</RootNamespace>
+
+    <!-- Package Metadata (Required for NuGet) -->
+    <PackageId>Slo248.Net.DomainDrivenDesign</PackageId>
+    <Version>1.0.0</Version>
+    <Authors>Slo248</Authors>
+    <Description>A Domain-Driven Design library providing base classes and interfaces for aggregate roots, entities, and domain events.</Description>
+    <RepositoryUrl>https://github.com/slo248/Net.Basis</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
+    <PackageTags>DDD;DomainDrivenDesign;AggregateRoot;Entity;DomainEvent</PackageTags>
+    <License>MIT</License>
+    <GeneratePackageOnBuild>false</GeneratePackageOnBuild>
   </PropertyGroup>
 
   <ItemGroup>
