@@ -34,17 +34,6 @@ dotnet add package Slo248.Net.DDD
 
 [Learn more →](./Slo248.Net.DDD/README.md)
 
-### 🧪 Slo248.Net.Tests.Core
-
-Core testing utilities and base classes for unit testing within the Slo248.Net ecosystem. Provides common test fixtures, domain event test helpers, and entity test utilities.
-
-### ✅ Slo248.Net.Tests.UnitTests
-
-Comprehensive unit test suite demonstrating and validating the functionality of core libraries. Includes tests for:
-- Aggregate root behavior and domain events
-- Entity identity and equality
-- Repository patterns
-- Event publishing mechanisms
 
 ## Quick Start
 
@@ -135,11 +124,10 @@ The Slo248.Net.Basis solution follows these architectural principles:
 
 ```
 Slo248.Net.Basis/
-├── Slo248.Net.DDD/                   # Core DDD library (NuGet package)
-│   ├── Models/                       # Base classes and interfaces
-│   └── Services/                     # Repository and event abstractions
-├── Slo248.Net.Tests.Core/            # Testing utilities and fixtures
-└── Slo248.Net.Tests.UnitTests/       # Comprehensive test suite
+├── Slo248.Net.DDD/          # Core DDD library (NuGet package)
+│   ├── Models/              # Base classes and interfaces
+│   └── Services/            # Repository and event abstractions
+└── Slo248.Tests/            # Unit tests for DDD library
 ```
 
 ## NuGet Packages
