@@ -4,7 +4,7 @@
 using Slo248.Net.DDD.Models;
 using Slo248.Tests.Mocks;
 
-namespace Slo248.Tests;
+namespace Slo248.Tests.Domain;
 
 /// <summary>
 /// Unit tests for the ValueObject base class.

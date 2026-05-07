@@ -4,7 +4,7 @@
 using Slo248.Net.DDD.Models;
 using Slo248.Tests.Mocks;
 
-namespace Slo248.Tests;
+namespace Slo248.Tests.Domain;
 
 public class EntityTests
 {
