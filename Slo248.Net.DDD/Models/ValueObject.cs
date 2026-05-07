@@ -1,7 +1,7 @@
 ﻿// Copyright (c) Slo248.
 // Licensed under the MIT License.
 
-namespace Slo248.Net.DomainDrivenDesign.Models;
+namespace Slo248.Net.DDD.Models;
 
 /// <summary>
 /// Base class for implementing value objects in Domain-Driven Design.

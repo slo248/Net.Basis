@@ -3,6 +3,6 @@
 
 using Slo248.Net.Cqrs.Requests;
 
-namespace Slo248.Net.DomainDrivenDesign.Models;
+namespace Slo248.Net.DDD.Models;
 
 public interface IDomainEvent : IRequest;

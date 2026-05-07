@@ -1,7 +1,7 @@
 ﻿// Copyright (c) Slo248.
 // Licensed under the MIT License.
 
-using Slo248.Net.DomainDrivenDesign.Models;
+using Slo248.Net.DDD.Models;
 using Slo248.Tests.Mocks;
 
 namespace Slo248.Tests;

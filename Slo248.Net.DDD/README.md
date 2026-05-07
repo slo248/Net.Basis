@@ -1,4 +1,4 @@
-﻿# Slo248.Net.DomainDrivenDesign
+﻿# Slo248.Net.DDD
 
 A lightweight, production-ready Domain-Driven Design (DDD) library for .NET providing foundational abstractions and base classes for building domain models using DDD principles.
 
@@ -13,12 +13,12 @@ A lightweight, production-ready Domain-Driven Design (DDD) library for .NET prov
 ## Installation
 
 ```bash
-dotnet add package Slo248.Net.DomainDrivenDesign
+dotnet add package Slo248.Net.DDD
 ```
 
 Or via Package Manager:
 ```
-Install-Package Slo248.Net.DomainDrivenDesign
+Install-Package Slo248.Net.DDD
 ```
 
 ## Quick Start
@@ -26,7 +26,7 @@ Install-Package Slo248.Net.DomainDrivenDesign
 ### Define an Entity
 
 ```csharp
-using Slo248.Net.DomainDrivenDesign.Models;
+using Slo248.Net.DDD.Models;
 
 public class Product : Entity<ProductId>
 {
@@ -47,7 +47,7 @@ public record ProductId(Guid Value) : EntityId(Value);
 ### Define an Aggregate Root
 
 ```csharp
-using Slo248.Net.DomainDrivenDesign.Models;
+using Slo248.Net.DDD.Models;
 
 public class Order : AggregateRoot<OrderId>
 {
@@ -74,7 +74,7 @@ public record OrderId(Guid Value) : EntityId(Value);
 ### Define a Domain Event
 
 ```csharp
-using Slo248.Net.DomainDrivenDesign.Models;
+using Slo248.Net.DDD.Models;
 
 public record OrderItemAddedEvent(OrderId OrderId, ProductId ProductId, int Quantity)
     : IDomainEvent;
@@ -84,7 +84,7 @@ public record OrderItemAddedEvent(OrderId OrderId, ProductId ProductId, int Quan
 
 ```csharp
 using MediatR;
-using Slo248.Net.DomainDrivenDesign.Services;
+using Slo248.Net.DDD.Services;
 
 public class OrderEventHandler : IDomainEventPublisher
 {

@@ -1,7 +1,7 @@
 ﻿// Copyright (c) Slo248.
 // Licensed under the MIT License.
 
-namespace Slo248.Net.DomainDrivenDesign.Models;
+namespace Slo248.Net.DDD.Models;
 
 public abstract class AggregateRoot<TId, TEntity> : BaseEntity<TId, TEntity>, IAggregateRoot
     where TId : notnull

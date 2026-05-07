@@ -1,9 +1,9 @@
 ﻿// Copyright (c) Slo248.
 // Licensed under the MIT License.
 
-using Slo248.Net.DomainDrivenDesign.Models;
+using Slo248.Net.DDD.Models;
 
-namespace Slo248.Net.DomainDrivenDesign.Services;
+namespace Slo248.Net.DDD.Services;
 
 public interface IDomainEventPublisher
 {

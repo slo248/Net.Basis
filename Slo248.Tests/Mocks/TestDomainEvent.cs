@@ -1,4 +1,4 @@
-﻿using Slo248.Net.DomainDrivenDesign.Models;
+﻿using Slo248.Net.DDD.Models;
 
 namespace Slo248.Tests.Mocks;
 
