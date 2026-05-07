@@ -1,12 +1,17 @@
-﻿name: Basis CI
+﻿name: Build & Test
 
 on:
-  push:
-    branches:
-      - main
   pull_request:
     branches:
       - main
+    paths:
+      - 'Slo248.Net.DDD/**'
+      - 'Slo248.Tests/**'
+      - '.github/workflows/ci.yml'
+      - 'global.json'
+      - 'Directory.Build.props'
+      - 'Directory.Packages.props'
+      - 'GitVersion.yml'
 
 permissions:
   contents: read
