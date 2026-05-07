@@ -7,8 +7,8 @@
     <RootNamespace>Slo248.Net.DDD</RootNamespace>
 
     <!-- Package Metadata (Required for NuGet) -->
+    <!-- Version is automatically managed by GitVersion in CI/CD -->
     <PackageId>Slo248.Net.DDD</PackageId>
-    <Version>1.0.2</Version>
     <Authors>Slo248</Authors>
     <Description>A Domain-Driven Design library providing base classes and interfaces for aggregate roots, entities, and domain events.</Description>
     <RepositoryUrl>https://github.com/slo248/Net.Basis</RepositoryUrl>

@@ -1,0 +1,8 @@
+﻿mode: Mainline
+next-version: 1.0.1
+branches:
+  main:
+    regex: ^main$
+    increment: Patch
+    prevent-increment-of-merged-branch-version: false
+    track-merge-target: false
