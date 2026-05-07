@@ -19,7 +19,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Slo248.Net.DomainDrivenDesign\Slo248.Net.DomainDrivenDesign.csproj"/>
+    <ProjectReference Include="..\Slo248.Net.DDD\Slo248.Net.DDD.csproj" />
   </ItemGroup>
 
 </Project>
