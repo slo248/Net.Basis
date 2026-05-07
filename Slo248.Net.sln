@@ -11,8 +11,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Slo248.Net.DDD", "Slo248.Ne
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Slo248.Tests", "Slo248.Tests\Slo248.Tests.csproj", "{7E07433C-87A3-4A7F-9AA1-849C5667DA9B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Slo248.Net.Cqrs", "Slo248.Net.Cqrs\Slo248.Net.Cqrs.csproj", "{7AEE7C27-2CD5-4C3F-BCF2-BE7F61446801}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,10 +25,6 @@ Global
 		{7E07433C-87A3-4A7F-9AA1-849C5667DA9B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7E07433C-87A3-4A7F-9AA1-849C5667DA9B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7E07433C-87A3-4A7F-9AA1-849C5667DA9B}.Release|Any CPU.Build.0 = Release|Any CPU
-		{7AEE7C27-2CD5-4C3F-BCF2-BE7F61446801}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{7AEE7C27-2CD5-4C3F-BCF2-BE7F61446801}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{7AEE7C27-2CD5-4C3F-BCF2-BE7F61446801}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{7AEE7C27-2CD5-4C3F-BCF2-BE7F61446801}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 	EndGlobalSection

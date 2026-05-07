@@ -31,8 +31,4 @@
     </None>
   </ItemGroup>
 
-  <ItemGroup>
-    <ProjectReference Include="..\Slo248.Net.Cqrs\Slo248.Net.Cqrs.csproj"/>
-  </ItemGroup>
-
 </Project>
