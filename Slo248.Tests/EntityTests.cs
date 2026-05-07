@@ -2,9 +2,9 @@
 // Licensed under the MIT License.
 
 using Slo248.Net.DomainDrivenDesign.Models;
-using Slo248.Net.Tests.Core;
+using Slo248.Tests.Mocks;
 
-namespace Slo248.Net.Tests.UnitTests;
+namespace Slo248.Tests;
 
 public class EntityTests
 {

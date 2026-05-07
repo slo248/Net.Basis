@@ -3,7 +3,7 @@
 
 using Slo248.Net.DomainDrivenDesign.Models;
 
-namespace Slo248.Net.Tests.Core;
+namespace Slo248.Tests.Mocks;
 
 /// <summary>
 /// A test implementation of ValueObject for testing purposes.

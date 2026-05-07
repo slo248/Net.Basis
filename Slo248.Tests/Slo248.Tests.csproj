@@ -5,7 +5,6 @@
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
     <IsPackable>false</IsPackable>
-    <RootNamespace>Slo248.Net.Tests.UnitTests</RootNamespace>
   </PropertyGroup>
 
   <ItemGroup>
@@ -20,7 +19,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Slo248.Net.Tests.Core\Slo248.Net.Tests.Core.csproj"/>
+    <ProjectReference Include="..\Slo248.Net.DomainDrivenDesign\Slo248.Net.DomainDrivenDesign.csproj"/>
   </ItemGroup>
 
 </Project>

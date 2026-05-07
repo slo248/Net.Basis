@@ -1,6 +1,6 @@
 ﻿using Slo248.Net.DomainDrivenDesign.Models;
 
-namespace Slo248.Net.Tests.Core;
+namespace Slo248.Tests.Mocks;
 
 public class TestAggregateRoot : AggregateRoot<TestAggregateRoot>
 {
