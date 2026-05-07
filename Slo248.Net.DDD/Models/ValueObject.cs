@@ -96,3 +96,20 @@ public abstract class ValueObject : IEquatable<ValueObject>
         return !(left == right);
     }
 }
+
+public class ValueObject<T> : ValueObject
+{
+    public T Value { get; }
+
+    protected ValueObject(T value)
+    {
+        Value = value;
+    }
+
+    protected override IEnumerable<object?> GetAtomicValues()
+    {
+        yield return Value;
+    }
+
+    public static implicit operator T(ValueObject<T> valueObject) => valueObject.Value;
+}

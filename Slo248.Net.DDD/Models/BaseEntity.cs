@@ -17,7 +17,8 @@ public abstract class BaseEntity<TId, TEntity>
 
     protected abstract void RaiseDomainEvent(IDomainEvent domainEvent);
 
-    public virtual void OnDomainEvent(IDomainEvent domainEvent) => throw new NotImplementedException();
+    public virtual void OnDomainEvent(IDomainEvent domainEvent)
+        => throw new InvalidOperationException("This method should never be called");
 
     public bool Equals(BaseEntity<TId, TEntity>? other)
     {

@@ -3,7 +3,7 @@
 
 namespace Slo248.Net.DDD.Models;
 
-public sealed class EntityId<TId, TEntity> : IEquatable<EntityId<TId, TEntity>>
+public class EntityId<TId, TEntity> : IEquatable<EntityId<TId, TEntity>>
     where TId : notnull
     where TEntity : notnull
 {
@@ -43,5 +43,25 @@ public sealed class EntityId<TId, TEntity> : IEquatable<EntityId<TId, TEntity>>
     public static bool operator !=(EntityId<TId, TEntity>? left, EntityId<TId, TEntity>? right)
     {
         return !Equals(left, right);
+    }
+
+    public static implicit operator EntityId<TEntity>(EntityId<TId, TEntity> id)
+    {
+        if (id.Value is Guid guid)
+        {
+            return new EntityId<TEntity>(guid);
+        }
+
+        throw new InvalidOperationException("EntityId must be a Guid");
+    }
+
+    public static implicit operator TId(EntityId<TId, TEntity> id) => id.Value;
+}
+
+public class EntityId<TEntity> : EntityId<Guid, TEntity>
+    where TEntity : notnull
+{
+    public EntityId(Guid value) : base(value)
+    {
     }
 }
