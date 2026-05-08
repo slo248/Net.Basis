@@ -1,0 +1,20 @@
+{
+  "skill_name": "ddd-csharp-docs",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "I just created an Order aggregate root that extends AggregateRoot. It has methods like AddItem() and RemoveItem() that manage OrderItems, plus a complete() method to finalize the order. The aggregate tracks uncommitted events. I need comprehensive XML documentation and a README section explaining the Order aggregate, how event sourcing works, what invariants are enforced, and show an example of the lifecycle. Make sure it's clear that entities raise events to the aggregate root via callback and explain why the strongly-typed ID pattern matters.",
+      "expected_output": "Complete XML doc comments for the Order aggregate with remarks explaining event sourcing, invariants, and type safety. README section with Order aggregate design, lifecycle example, and event publishing workflow."
+    },
+    {
+      "id": 2,
+      "prompt": "I have a ValueObject called Money that wraps an Amount (decimal) and Currency (string). It implements GetAtomicValues() for equality comparison. I also have an OrderStatus enum-like value object. Add full XML documentation explaining value-based equality, immutability constraints, and how they differ from entities. Include examples of when two Money instances are equal.",
+      "expected_output": "XML doc comments for both value objects explaining immutability, value-based equality semantics, atomic values, constraints, and usage examples."
+    },
+    {
+      "id": 3,
+      "prompt": "I'm creating a repository for the Order aggregate root that implements IRepository<Order, Guid>. The Add() and Update() methods need to persist the aggregate, publish uncommitted domain events via IDomainEventPublisher, and then call MarkAsCommitted(). Document the repository with clear explanation of the three-step lifecycle, why MarkAsCommitted() is critical, and what happens if you forget it. Include a code example showing the proper flow.",
+      "expected_output": "XML doc comments for the repository explaining the event publishing lifecycle, critical warnings about MarkAsCommitted(), and examples of correct usage."
+    }
+  ]
+}
