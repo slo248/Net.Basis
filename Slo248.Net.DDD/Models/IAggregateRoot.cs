@@ -8,9 +8,9 @@ namespace Slo248.Net.DDD.Models;
 /// </summary>
 /// <remarks>
 /// An <see cref="IAggregateRoot"/> is the consistency boundary for a group of related entities and value objects.
-/// Implementations expose the uncommitted domain events via <see cref="GetUncommittedEvents()"/>, which the
+/// Implementations expose the uncommitted domain events via <see cref="GetUncommittedEvents"/>, which the
 /// repository is responsible for publishing after persisting the aggregate. Once events have been published,
-/// the repository should call <see cref="MarkAsCommitted()"/> to clear the event list and avoid duplicate publication.
+/// the repository should call <see cref="MarkAsCommitted"/> to clear the event list and avoid duplicate publication.
 /// </remarks>
 public interface IAggregateRoot
 {
