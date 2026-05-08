@@ -9,6 +9,11 @@ public abstract class Entity<TId, TEntity> : BaseEntity<TId, TEntity>
 {
     private readonly Action<IDomainEvent> _raiseToRoot;
 
+    /// <summary>
+    /// Creates a child entity that propagates domain events to its parent aggregate root.
+    /// </summary>
+    /// <param name="id">The strongly-typed identifier for the entity.</param>
+    /// <param name="raiseToRoot">Callback used to raise events on the aggregate root.</param>
     protected Entity(EntityId<TId, TEntity> id, Action<IDomainEvent> raiseToRoot) : base(id)
     {
         ArgumentNullException.ThrowIfNull(raiseToRoot);
@@ -16,6 +21,10 @@ public abstract class Entity<TId, TEntity> : BaseEntity<TId, TEntity>
         _raiseToRoot = raiseToRoot;
     }
 
+    /// <summary>
+    /// Propagates the domain event to the parent aggregate root via the callback provided at construction.
+    /// </summary>
+    /// <param name="domainEvent">The domain event to propagate.</param>
     protected override void RaiseDomainEvent(IDomainEvent domainEvent) => _raiseToRoot(domainEvent);
 }
 

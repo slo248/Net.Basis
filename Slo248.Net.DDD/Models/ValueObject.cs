@@ -99,6 +99,14 @@ public abstract class ValueObject : IEquatable<ValueObject>
 
 public class ValueObject<T> : ValueObject
 {
+    /// <summary>
+    /// Generic value object that wraps a single value of type <typeparamref name="T"/>.
+    /// </summary>
+    /// <remarks>
+    /// This is a convenience base for simple value objects that have a single atomic value.
+    /// Equality is delegated to the base <see cref="ValueObject"/> implementation which compares
+    /// the atomic values returned by <see cref="GetAtomicValues"/>.
+    /// </remarks>
     public T Value { get; }
 
     protected ValueObject(T value)
