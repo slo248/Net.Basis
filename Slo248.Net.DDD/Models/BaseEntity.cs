@@ -32,7 +32,8 @@ public abstract class BaseEntity<TId, TEntity>
     /// <summary>
     /// Hook for applying a domain event to the entity. The default implementation throws because
     /// entities should not be applied directly via this base method; aggregates often expose their
-    /// own event application logic.</summary>
+    /// own event application logic.
+    /// </summary>
     /// <param name="domainEvent">The domain event being applied.</param>
     public virtual void OnDomainEvent(IDomainEvent domainEvent)
         => throw new InvalidOperationException("This method should never be called");
